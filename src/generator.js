@@ -7,9 +7,9 @@ function* numbers(start, end) {
 
 const noop = identity
 
-const transEach = uncurryN(2, func => transduce(identity, (_, val)=> func(val), null))
+const each = uncurryN(2, func => transduce(identity, (_, val)=> func(val), null))
 
-const each = transEach(::console.log)
+const logEach = each(::console.log)
 
-each(numbers(1, 3)) //=> 1 2 3
-each([1,2,3,4]) //=> 1 2 3 4
+logEach(numbers(1, 3)) //=> 1 2 3
+logEach([1, 2, 3, 4]) //=> 1 2 3 4
