@@ -60,7 +60,7 @@ const config = {
 gulp.task('clean-build', done => del('./build', done))
 
 gulp.task('build', ['clean-build'], function(done) {
-  webpack(config).run(function(err, stats) {
+  webpack(config).run(function(err) {
     if (err) {
       console.log('Error', err)
     } else {
@@ -71,7 +71,7 @@ gulp.task('build', ['clean-build'], function(done) {
 })
 
 gulp.task('build-watch', ['build'], function() {
-  webpack(config).watch(100, function(err, stats) {
+  webpack(config).watch(100, function(err) {
     if (err) {
       console.log('Error', err)
     } else {

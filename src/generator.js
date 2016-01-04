@@ -1,11 +1,9 @@
-import { into, map, identity, transduce, uncurryN } from 'ramda'
+import { identity, transduce, uncurryN } from 'ramda'
 
 function* numbers(start, end) {
   for(let curr = start; curr <= end; curr++)
     yield curr
 }
-
-const noop = identity
 
 const each = uncurryN(2, func => transduce(identity, (_, val)=> func(val), null))
 
