@@ -1,7 +1,7 @@
 import { identity, transduce, uncurryN } from 'ramda'
 
 function* numbers(start, end) {
-  for(let curr = start; curr <= end; curr++)
+  for (let curr = start; curr <= end; curr++)
     yield curr
 }
 
