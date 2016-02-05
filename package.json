@@ -8,6 +8,7 @@
   "author": "Ivan Efremov",
   "license": "ISC",
   "dependencies": {
+    "bluebird": "^3.2.1",
     "ramda": "^0.19.0"
   },
   "devDependencies": {
